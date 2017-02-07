@@ -3,7 +3,7 @@ FROM node:5-slim
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     apt-transport-https build-essential git python ssh \
-    imagemagick wkhtmltopdf \
+    imagemagick \
     less unzip vim \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
