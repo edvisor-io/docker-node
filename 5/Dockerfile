@@ -4,7 +4,7 @@ ENV NPM_CONFIG_LOGLEVEL warn
 
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
-    apt-transport-https build-essential git python ssh \
+    build-essential git python ssh \
     imagemagick \
     less unzip vim \
   && apt-get clean \

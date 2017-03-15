@@ -1,8 +1,10 @@
 FROM node:4-slim
 
+ENV NPM_CONFIG_LOGLEVEL warn
+
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
-    build-essential git python \
+    build-essential git python ssh \
     imagemagick \
     less unzip vim \
   && apt-get clean \
