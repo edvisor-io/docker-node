@@ -15,4 +15,4 @@ RUN curl --silent --show-error https://s3.amazonaws.com/aws-cli/awscli-bundle.zi
   && ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws \
   && rm -rf awscli-bundle awscli-bundle.zip
 
-RUN npm install --global node-gyp
+RUN npm install --global node-gyp serverless
