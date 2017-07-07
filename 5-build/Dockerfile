@@ -2,20 +2,17 @@ FROM edvisor/node:5
 
 ENV DEBIAN_FRONTEND noninteractive
 
-COPY preferences /etc/apt/preferences
-
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     apt-transport-https \
     software-properties-common \
   && curl --silent --show-error --location https://download.docker.com/linux/debian/gpg | apt-key add - \
   && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian jessie stable" \
-  && add-apt-repository "deb http://deb.debian.org/debian testing main" \
+  && add-apt-repository "deb http://deb.debian.org/debian stretch main" \
   && apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     docker-ce \
-  && apt-get install --assume-yes --no-install-recommends --target-release testing \
-    ruby \
+    ruby2.3 \
     mariadb-client \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
