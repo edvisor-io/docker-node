@@ -18,4 +18,4 @@ RUN curl -sS http://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN yarn global add npm node-gyp
+RUN yarn global add gulp knex node-gyp node-pre-gyp npm

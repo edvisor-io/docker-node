@@ -10,4 +10,4 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN yarn global add npm node-gyp node-pre-gyp
+RUN yarn global add gulp knex node-gyp node-pre-gyp npm
