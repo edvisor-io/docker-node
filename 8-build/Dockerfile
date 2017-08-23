@@ -6,6 +6,7 @@ RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     apt-transport-https \
     software-properties-common \
+    unzip \
   && curl --silent --show-error --location https://download.docker.com/linux/debian/gpg | apt-key add - \
   && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian jessie stable" \
   && add-apt-repository "deb http://deb.debian.org/debian stretch main" \
