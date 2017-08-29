@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     apt-transport-https \
+    libfontconfig1 \
     software-properties-common \
     unzip \
   && curl --silent --show-error --location https://download.docker.com/linux/debian/gpg | apt-key add - \
