@@ -1,6 +1,6 @@
 FROM amazonlinux:latest
 
-ENV NPM_CONFIG_LOGLEVEL warn
+ENV NPM_CONFIG_LOGLEVEL error
 
 RUN curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - \
   && curl --silent --output /etc/yum.repos.d/yarn.repo https://dl.yarnpkg.com/rpm/yarn.repo \

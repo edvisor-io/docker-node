@@ -1,6 +1,6 @@
 FROM node:6-slim
 
-ENV NPM_CONFIG_LOGLEVEL warn
+ENV NPM_CONFIG_LOGLEVEL error
 
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \

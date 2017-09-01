@@ -19,9 +19,6 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN curl --silent --show-error --location --output /bin/jq https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64 \
-  && chmod +x /bin/jq
-
 RUN curl --silent --show-error https://s3.amazonaws.com/aws-cli/awscli-bundle.zip --output awscli-bundle.zip \
   && unzip awscli-bundle.zip \
   && ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws \
