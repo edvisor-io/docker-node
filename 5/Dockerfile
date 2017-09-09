@@ -1,6 +1,7 @@
 FROM node:5-slim
 
 ENV NPM_CONFIG_LOGLEVEL error
+ENV NPM_VERSION 5.3.0
 
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
@@ -17,4 +18,4 @@ RUN curl -sS http://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN yarn global add node-gyp node-pre-gyp npm
+RUN yarn global add node-gyp node-pre-gyp npm@${NPM_VERSION}
