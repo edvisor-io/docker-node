@@ -1,7 +1,6 @@
 FROM node:6-slim
 
 ENV NPM_CONFIG_LOGLEVEL error
-ENV NPM_VERSION 5.3.0
 
 RUN apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
@@ -10,4 +9,4 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN yarn global add node-gyp node-pre-gyp npm@${NPM_VERSION}
+RUN yarn global add node-gyp node-pre-gyp
