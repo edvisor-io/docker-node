@@ -14,8 +14,10 @@ RUN apt-get update \
   && apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     docker-ce \
-    ruby2.3 \
+    libmariadb-dev \
     mariadb-client \
+    ruby2.3 \
+    ruby2.3-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
