@@ -18,6 +18,7 @@ RUN apt-get update \
     mariadb-client \
     ruby2.3 \
     ruby2.3-dev \
+    zlib1g-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
