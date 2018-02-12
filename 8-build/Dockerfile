@@ -27,6 +27,6 @@ RUN curl --silent --show-error https://s3.amazonaws.com/aws-cli/awscli-bundle.zi
   && ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws \
   && rm -rf awscli-bundle awscli-bundle.zip
 
-RUN gem install aws-sdk bundler dogapi intercom mysql2 unirest --no-document
+RUN gem install aws-sdk bundler dogapi intercom mysql2 postmark unirest --no-document
 
 RUN yarn global add gulp knex
