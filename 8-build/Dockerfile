@@ -11,9 +11,12 @@ RUN apt-get update \
   && curl --silent --show-error --location https://download.docker.com/linux/debian/gpg | apt-key add - \
   && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian jessie stable" \
   && add-apt-repository "deb http://deb.debian.org/debian stretch main" \
+  && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
   && apt-get update \
   && apt-get install --assume-yes --no-install-recommends \
     docker-ce \
+    google-chrome-stable \
     libmariadb-dev \
     mariadb-client \
     ruby2.3 \
