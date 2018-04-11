@@ -1,4 +1,4 @@
-FROM node:8.9-slim
+FROM node:8.11-slim
 
 ENV NPM_CONFIG_LOGLEVEL error
 ENV NPM_VERSION 5.5.1
