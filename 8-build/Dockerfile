@@ -33,3 +33,6 @@ RUN curl --silent --show-error https://s3.amazonaws.com/aws-cli/awscli-bundle.zi
 RUN gem install aws-sdk bundler dogapi intercom mysql2 postmark unirest --no-document
 
 RUN yarn global add gulp knex
+
+ENV CHROME_BIN /usr/bin/google-chrome-stable
+
