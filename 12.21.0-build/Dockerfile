@@ -24,13 +24,15 @@ RUN apt-get update \
     ruby2.3-dev \
     zlib1g-dev \
     imagemagick \
+    python3 \
+    jq \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN curl --silent --show-error https://s3.amazonaws.com/aws-cli/awscli-bundle.zip --output awscli-bundle.zip \
-  && unzip awscli-bundle.zip \
-  && ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws \
-  && rm -rf awscli-bundle awscli-bundle.zip
+RUN curl --silent --show-error https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip  --output awscli-v2.zip \
+  && unzip awscli-v2.zip \
+  && ./aws/install -i /usr/local/aws-cli -b /usr/local/bin \
+  && rm -rf aws awscli-v2.zip
 
 RUN gem install aws-sdk bundler dogapi intercom mysql2 postmark unirest --no-document
 
